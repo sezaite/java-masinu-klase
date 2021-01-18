@@ -20,18 +20,20 @@ public class JavaApplication8 {
             new Masina("Penkta", 140),
             new Masina("Sesta", 170),
             new Masina("Septinta", 190),
-            new Masina("Astunta", 140)
+            new Masina("Astunta", 140),
+//            new SportineMasina("Sportine Nr. 1", 300),
+//            new SportineMasina("Sportine Nr. 1", 300)
+            
         };
 
         boolean arPasiektasSimtas = false;
         int simtukaiCount = 100;
         while (simtukaiCount < 1000) {
             for (int i = 0; i < race.length; i++) {
-                int randomPokytis = (int) (Math.random() * 10) + 1;
-                if (randomPokytis < 6) {
+                if (Math.random() < 0.5) {
                     int padidejimas = (int) (Math.random() * 10) + 1;
                     race[i].gazuok(padidejimas);
-                } else if (randomPokytis < 9) {
+                } else if (Math.random() < 0.8) {
                     int paletejimas = (int) (Math.random() * 5) + 1;
                     race[i].gazuok(paletejimas);
                 } else {
